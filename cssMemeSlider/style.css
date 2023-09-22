@@ -26,5 +26,27 @@ img {
 }
 .captions {
     display: flex;
-    flex-direction: column;
+    visibility: hidden;
+}
+#mem1:checked ~ .images {
+    transform: translate(0);
+}
+#mem2:checked ~ .images {
+    transform: translate(-300px);
+}
+#mem3:checked ~ .images {
+    transform: translate(-600px);
+}
+#mem4:checked ~ .images {
+    transform: translate(-900px);
+}
+
+#mem1:checked ~ .captions #caption1,
+#mem2:checked ~ .captions #caption2,
+#mem3:checked ~ .captions #caption3,
+#mem4:checked ~ .captions #caption4 {
+    display: block;
+    visibility: visible;
+    font-size: large;
+    opacity: 1;
 }
