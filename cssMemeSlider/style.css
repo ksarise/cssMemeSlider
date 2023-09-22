@@ -1,12 +1,14 @@
 body {
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: darkgrey;
+    overflow: hidden;
 }
 
 .slider-wrap {
     width: 1200px;
-    height: 800px;
+    height: 1000px;
     background-color: grey;
     display: flex;
     align-items: center;
@@ -51,6 +53,7 @@ img {
     border-radius: 50%;
     cursor: pointer;
 }
+
 .slider-controls label:hover {
     background-color: whitesmoke;
 }
@@ -67,6 +70,8 @@ img {
     width: 1000px;
     overflow: hidden;
     transition: 0.5s;
+    font-size: 15px;
+    color:white;
 }
 
 #mem1:checked ~ .slider-images {
@@ -82,23 +87,23 @@ img {
     transform: translate(-3000px);
 }
 
-#mem1:checked ~ .slider-captions #caption1 {
+#mem1:checked ~ .slider-captions  {
     transform: translate(0);
 }
-#mem2:checked ~ .slider-captions #caption2 {
+#mem2:checked ~ .slider-captions  {
     transform: translate(-1000px);
 }
-#mem3:checked ~ .slider-captions #caption3 {
+#mem3:checked ~ .slider-captions {
     transform: translate(-2000px);
 }
-#mem4:checked ~ .slider-captions #caption4 {
+#mem4:checked ~ .slider-captions  {
     transform: translate(-3000px);
 }
-
-#mem1:checked ~ .slider-controls label [for="mem1"],
-#mem2:checked ~ .slider-controls label [for="mem2"],
-#mem3:checked ~ .slider-controls label [for="mem3"],
-#mem4:checked ~ .slider-controls label [for="mem4"]
-{
-    border: 4px solid #67addf;
+#mem1:checked ~.slider-controls label[for="mem1"],
+#mem2:checked ~.slider-controls label[for="mem2"],
+#mem3:checked ~.slider-controls label[for="mem3"],
+#mem4:checked ~.slider-controls label[for="mem4"] {
+    border: 2px solid #67addf;
+    background-color: darkgrey;
+    transition: 5s;
 }
