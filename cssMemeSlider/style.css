@@ -23,12 +23,14 @@ body {
     margin-top: 10px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 input  {
     display: none;
 }
 .images {
     width: 4050px;
+    transition: 0.5s;
 }
 img {
     height: 500px;
@@ -52,6 +54,7 @@ img {
     visibility: hidden;
     position: relative;
     margin-top: -10px;
+    transition: 0.5s;
 }
 
 #mem1:checked ~ .images {
