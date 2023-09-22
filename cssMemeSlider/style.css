@@ -1,0 +1,109 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: darkgrey;
+    overflow: hidden;
+}
+
+.slider-wrap {
+    width: 1200px;
+    height: 1000px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.slider {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+input  {
+    display: none;
+}
+.slider-images {
+    width: 4050px;
+    transition: 0.5s;
+}
+img {
+    height: 500px;
+    width: 1000px;
+    border-radius: 10px;
+}
+.slider-controls {
+    display: flex;
+    margin-top: 45px;
+    gap: 10px;
+    justify-content: flex-end;
+    z-index: 2;
+}
+.slider-controls label {
+    background-color: #67addf;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls label:hover {
+    background-color: whitesmoke;
+}
+.slider-captions {
+    display: flex;
+    position: relative;
+    margin-top: -30px;
+    transition: 0.5s;
+    width: 4050px;
+    overflow: hidden;
+    z-index: 1;
+}
+.caption {
+    width: 1000px;
+    overflow: hidden;
+    transition: 0.5s;
+    font-size: 15px;
+    color:white;
+}
+
+#mem1:checked ~ .slider-images {
+    transform: translate(0);
+}
+#mem2:checked ~ .slider-images {
+    transform: translate(-1000px);
+}
+#mem3:checked ~ .slider-images {
+    transform: translate(-2000px);
+}
+#mem4:checked ~ .slider-images {
+    transform: translate(-3000px);
+}
+
+#mem1:checked ~ .slider-captions  {
+    transform: translate(0);
+}
+#mem2:checked ~ .slider-captions  {
+    transform: translate(-1000px);
+}
+#mem3:checked ~ .slider-captions {
+    transform: translate(-2000px);
+}
+#mem4:checked ~ .slider-captions  {
+    transform: translate(-3000px);
+}
+#mem1:checked ~.slider-controls label[for="mem1"],
+#mem2:checked ~.slider-controls label[for="mem2"],
+#mem3:checked ~.slider-controls label[for="mem3"],
+#mem4:checked ~.slider-controls label[for="mem4"] {
+    border: 0.5px solid #67addf;
+    background-color: darkgrey;
+    transition: 0.3s;
+}
