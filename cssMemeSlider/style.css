@@ -22,8 +22,8 @@ body {
     flex-direction: column;
     margin-top: 10px;
     position: relative;
-    overflow: hidden;
     transition: 0.5s;
+    overflow: hidden;
 }
 input  {
     display: none;
@@ -39,8 +39,9 @@ img {
 }
 .slider-controls {
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
     justify-content: flex-end;
+    z-index: 2;
 }
 .slider-controls label {
     background-color: black;
@@ -51,9 +52,16 @@ img {
 }
 .captions {
     display: flex;
-    visibility: hidden;
     position: relative;
-    margin-top: -10px;
+    margin-top: -30px;
+    transition: 0.5s;
+    width: 4050px;
+    overflow: hidden;
+    z-index: 1;
+}
+.caption {
+    width: 1000px;
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -70,12 +78,15 @@ img {
     transform: translate(-3000px);
 }
 
-#mem1:checked ~ .captions #caption1,
-#mem2:checked ~ .captions #caption2,
-#mem3:checked ~ .captions #caption3,
+#mem1:checked ~ .captions #caption1 {
+    transform: translate(0);
+}
+#mem2:checked ~ .captions #caption2 {
+    transform: translate(-1000px);
+}
+#mem3:checked ~ .captions #caption3 {
+    transform: translate(-2000px);
+}
 #mem4:checked ~ .captions #caption4 {
-    display: block;
-    visibility: visible;
-    font-size: large;
-    opacity: 1;
+    transform: translate(-3000px);
 }
