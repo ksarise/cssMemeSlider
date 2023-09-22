@@ -7,38 +7,64 @@ body {
 .slider-wrap {
     width: 1200px;
     height: 800px;
-    background-color: gray;
+    background-color: grey;
     display: flex;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
 }
 .slider {
-    width: 900px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+input  {
+    display: none;
 }
 .images {
-    width: 2160px;
+    width: 4050px;
 }
 img {
-    height: 200px;
+    height: 500px;
+    width: 1000px;
+    border-radius: 10px;
+}
+.slider-controls {
+    display: flex;
+    margin-top: 30px;
+    justify-content: flex-end;
+}
+.slider-controls label {
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .captions {
     display: flex;
     visibility: hidden;
+    position: relative;
+    margin-top: -10px;
 }
+
 #mem1:checked ~ .images {
     transform: translate(0);
 }
 #mem2:checked ~ .images {
-    transform: translate(-300px);
+    transform: translate(-1000px);
 }
 #mem3:checked ~ .images {
-    transform: translate(-600px);
+    transform: translate(-2000px);
 }
 #mem4:checked ~ .images {
-    transform: translate(-900px);
+    transform: translate(-3000px);
 }
 
 #mem1:checked ~ .captions #caption1,
