@@ -103,7 +103,7 @@ img {
 #mem2:checked ~.slider-controls label[for="mem2"],
 #mem3:checked ~.slider-controls label[for="mem3"],
 #mem4:checked ~.slider-controls label[for="mem4"] {
-    border: 2px solid #67addf;
+    border: 0.5px solid #67addf;
     background-color: darkgrey;
-    transition: 5s;
+    transition: 0.3s;
 }
